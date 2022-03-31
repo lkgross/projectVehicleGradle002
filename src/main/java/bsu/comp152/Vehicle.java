@@ -2,6 +2,25 @@ package bsu.comp152;
 
 /**
  * Vehicle - A class that represents a vehicle
+ * It is a superclass of all the other classes that
+ * represent vehicles, such as Automobile.
+ *
+ * Automobile is a subclass of Vehicle.
+ *
+ * Subclasses of Vehicle are Automobile, Motorcycle, Truck,
+ * and their subclasses.
+ *
+ * We speak of an "is-a relationship": A Motorcycle is-a Vehicle, etc.
+ *
+ * We also say Vehicle is a base or parent class of the
+ * Automobile class.
+ *
+ * We also say Automobile is a derived or child class of Vehicle.
+ *
+ * The fields and methods that all vehicles have in common are
+ * defined in the Vehicle class.
+ *
+ * Starter code from Computer Science 11, Boston University
  */
 public class Vehicle {
     private String make;
@@ -39,7 +58,6 @@ public class Vehicle {
 
     // Accessors
 
-
     public String getMake() {
         return make;
     }
@@ -66,7 +84,9 @@ public class Vehicle {
 
     @Override
     public String toString() {
-        return String.format("Vehicle{make = '%s', model = '%s'}",
-                make, model);
+        return "Vehicle{" +
+                "make='" + make + '\'' +
+                ", model='" + model + '\'' +
+                '}';
     }
 }
